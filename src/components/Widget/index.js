@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import motion from 'framer-motion';
 
 const Widget = styled.div`
   margin-top: 24px;

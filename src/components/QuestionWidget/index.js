@@ -19,7 +19,7 @@ export default function QuestionWidget({
     <Widget>
       <Widget.Header>
         <BackLinkArrow href="/" />
-        <h3>
+        <h3 style={{ margin: 'auto' }}>
           {` Pergunta ${questionIndex + 1} de ${totalQuestions} `}
         </h3>
       </Widget.Header>
@@ -72,8 +72,6 @@ export default function QuestionWidget({
           })}
 
           <Button type="submit" disabled={!hasAlternativeSelected}>Confirmar</Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
         </AlternativesForm>
       </Widget.Content>
     </Widget>

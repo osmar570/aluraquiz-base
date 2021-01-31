@@ -1,4 +1,8 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React, { Children } from 'react';
 import NextLink from 'next/link';
 

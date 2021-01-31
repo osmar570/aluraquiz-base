@@ -8,7 +8,6 @@ import QuizContainer from '../../src/components/QuizContainer';
 import QuestionWidget from '../../src/components/QuestionWidget';
 import LoadingWidget from '../../src/components/LoadingWidget';
 import ResultWidget from '../../src/components/ResultWidget';
-import Widget from '../../src/components/Widget';
 // import QuizPage from '../../src/components/QuizPage';
 
 export default function QuizPage() {
@@ -66,29 +65,6 @@ export default function QuizPage() {
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
-
-        <Widget>
-          <Widget.Content>
-            <h1>Quizes da galera</h1>
-            <ul>
-              {db.external.map((linkExterno) => {
-                const [projectNme, githubUser] = linkExterno
-                  .replace(/\//g, '')
-                  .replace('https:', '')
-                  .replace('.vercel.app', '')
-                  .split('.');
-
-                return (
-                  <li key={linkExterno}>
-                    <Widget.Topic href={`/quiz/${projectNme}___${githubUser}`}>
-                      {`${githubUser}/${projectNme}`}
-                    </Widget.Topic>
-                  </li>
-                );
-              })}
-            </ul>
-          </Widget.Content>
-        </Widget>
       </QuizContainer>
     </QuizBackground>
   );

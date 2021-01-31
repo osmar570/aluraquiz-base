@@ -57,7 +57,7 @@ export default function Home() {
                 type="submit"
                 disabled={name.length === 0}
                 as={motion.button}
-                transition={{ delay: 0.7, duration: .2 }}
+                transition={{ delay: 0.7, duration: 0.2 }}
                 variants={{
                   show: { opacity: 1, y: '0' },
                   hidden: { opacity: 0, y: '100%' },
